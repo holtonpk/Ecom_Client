@@ -79,7 +79,7 @@ const Header = () => {
       </div>
       <div className="sticky z-30 w-full py-4 overflow-hidden bg-black border-red-500 -top-1 xl:border-2 b-b">
         <div className="items-center justify-between w-full mx-auto headerGrid md:flex md:flex-row md:w-5/6 h-fit b-r">
-          <Link href="/#">
+          <Link href="/#" className="order-1">
             <a>
               <h1 className="relative px-4 mx-auto text-3xl text-white w-fit cornerBox">
                 Specture.
@@ -88,7 +88,7 @@ const Header = () => {
           </Link>
 
           <Navbar />
-          <div className="w-full md:w-fit">
+          <div className="order-3 w-full md:w-fit b-b">
             <div className="flex flex-row justify-between float-right pb-3 w-fit h-fit">
               {/* <BsSearch className="w-6 h-6 mr-8 fill-white " /> */}
 
