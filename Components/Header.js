@@ -77,8 +77,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="sticky z-30 w-full py-4 overflow-hidden bg-black border-red-500 -top-1 xl:border-2">
-        <div className="items-center justify-between w-full mx-auto headerGrid md:flex md:flex-row md:w-5/6 h-fit">
+      <div className="sticky z-30 w-full py-4 overflow-hidden bg-black border-red-500 -top-1 xl:border-2 b-b">
+        <div className="items-center justify-between w-full mx-auto headerGrid md:flex md:flex-row md:w-5/6 h-fit b-r">
           <Link href="/#">
             <a>
               <h1 className="relative px-4 mx-auto text-3xl text-white w-fit cornerBox">
