@@ -77,19 +77,18 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="sticky z-30 w-full py-4 overflow-hidden bg-black -top-1 b-r">
+      <div className="sticky z-30 w-full py-4 overflow-hidden bg-black border-red-500 -top-1 xl:border-2">
         <div className="items-center justify-between w-full mx-auto headerGrid md:flex md:flex-row md:w-5/6 h-fit">
+          <Link href="/#">
+            <a>
+              <h1 className="relative px-4 mx-auto text-3xl text-white w-fit cornerBox">
+                Specture.
+              </h1>
+            </a>
+          </Link>
+
           <Navbar />
-          <div className="order-1 ">
-            <Link href="/#" className="order-1 md:order-2">
-              <a>
-                <h1 className="relative px-4 mx-auto text-3xl text-white w-fit cornerBox">
-                  Specture.
-                </h1>
-              </a>
-            </Link>
-          </div>
-          <div className="order-3 w-full md:w-fit">
+          <div className="w-full md:w-fit">
             <div className="flex flex-row justify-between float-right pb-3 w-fit h-fit">
               {/* <BsSearch className="w-6 h-6 mr-8 fill-white " /> */}
 

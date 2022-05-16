@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const Navbar = () => {
   return (
-    <div id="navbar" className="order-2 hidden xl:w-fit xl:order-2 h-fit">
+    <div id="navbar" className="w-fit h-fit">
       <div className="flex-row items-center justify-between hidden xl:flex w-fit">
         <Link href="/#">
           <a className="mr-4 text-2xl font-thin text-white">Home</a>
