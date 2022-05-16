@@ -130,6 +130,13 @@
 }
 
 @media (min-width: 1280px) {
+  #hamburgerMenu {
+    display: none !important;
+  }
+  #navbar {
+    display: block !important;
+  }
+
   #productImage {
     width: 600px;
     height: 600px;

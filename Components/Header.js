@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import Image from "next/image";
 import Link from "next/link";
 import { GoPackage } from "react-icons/go";
 import { MdMenu, MdOutlineClose } from "react-icons/md";
-
 import Cart from "./Cart";
-import { BsHandbag, BsSearch, BsPerson } from "react-icons/bs";
-import {
-  IoPersonOutline,
-  IoBagHandleOutline,
-  IoHeartOutline,
-} from "react-icons/io5";
+import { IoPersonOutline, IoBagHandleOutline } from "react-icons/io5";
 import { useCart } from "react-use-cart";
 import Signin from "./Signin";
 const Header = () => {
@@ -42,12 +35,12 @@ const Header = () => {
     <>
       <Cart />
       <Signin />
-      <div id="hamburgerMenu" className="absolute z-40 xl:hidden ">
+      <div id="hamburgerMenu" className="absolute z-40">
         <button
           onClick={hamburgerClick}
           className="fixed p-3 my-auto -translate-y-full bg-white border-2 border-black rounded-full h-fit top-90 left-2"
         >
-          <MdMenu className="w-12 h-12 fill-black xl:hidden" />
+          <MdMenu className="w-12 h-12 fill-black" />
         </button>
         <div id="hamburgerMenuDrop" className="fixed z-50 hidden ">
           <button
@@ -102,12 +95,12 @@ const Header = () => {
 
               <Link href="/Order">
                 <a
-                  className="relative flex flex-col items-center p-2 mr-3 border-2 rounded-full navButton border-c1 w-fit"
+                  className="relative flex flex-col items-center p-3 mr-3 border-2 rounded-full navButton border-c1 w-fit h-fit"
                   id="tracking"
                 >
                   <GoPackage
                     id="trackingIcon"
-                    className="w-6 h-6 text-white navButtonIcon"
+                    className="w-10 h-10 text-white navButtonIcon"
                   />
                   <h1 className="absolute mt-4 text-white font-f1 text-md top-6 hide whitespace-nowrap">
                     Track Package
@@ -115,7 +108,7 @@ const Header = () => {
                 </a>
               </Link>
               <button
-                className="relative flex flex-col items-center p-2 mr-3 border-2 rounded-full navButton border-c1 w-fit"
+                className="relative flex flex-col items-center p-3 mr-3 border-2 rounded-full navButton border-c1 w-fit h-fit"
                 id="profile"
                 onClick={() =>
                   document.getElementById("signIn").classList.toggle("hidden")
@@ -123,7 +116,7 @@ const Header = () => {
               >
                 <IoPersonOutline
                   id="profileIcon"
-                  className="w-6 h-6 text-white navButtonIcon"
+                  className="w-10 h-10 text-white navButtonIcon"
                 />
                 <h1 className="absolute mt-4 text-white font-f1 text-md top-6 hide">
                   Profile
@@ -134,18 +127,18 @@ const Header = () => {
                 onClick={() => {
                   document.getElementById("Cart").classList.remove("hidden");
                 }}
-                className="relative flex flex-col items-center p-2 border-2 rounded-full text-c1 navButton border-c1 w-fit "
+                className="relative flex flex-col items-center p-3 border-2 rounded-full text-c1 navButton border-c1 w-fit h-fit"
                 id="cart"
               >
                 <IoBagHandleOutline
                   id="cartIcon"
-                  className="w-6 h-6 text-white text-c1 navButtonIcon"
+                  className="w-10 h-10 text-white text-c1 navButtonIcon"
                 />
                 {(() => {
                   if (!emptyCart)
                     return (
-                      <div className="absolute flex flex-row items-center w-4 h-4 mx-auto text-center text-black -translate-x-full -translate-y-1/2 bg-white rounded-full top-full left-full">
-                        <h2 className="mx-auto text-xs">{totalItems}</h2>
+                      <div className="absolute flex flex-row items-center w-6 h-6 mx-auto text-center text-black -translate-x-full -translate-y-1/2 bg-white rounded-full top-full left-full">
+                        <h2 className="mx-auto text-md">{totalItems}</h2>
                       </div>
                     );
                 })()}
